@@ -16,7 +16,8 @@ phases:
   build:
     commands:
       - rm -rf public
-      - hugo deploy
+      # - hugo
+      - aws s3 sync public/ s3//hugo-screencast-cloud/ --region us-east-2 --delete
   post_build:
     commands:
       #- aws s3 sync --delete public s3://dukefeb1
