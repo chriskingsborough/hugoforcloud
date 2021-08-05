@@ -15,7 +15,6 @@ phases:
       - rm -rf /tmp
   build:
     commands:
-      - cd ~/environment/quickstart
       - rm -rf public
       - hugo deploy
   post_build:
